@@ -19,7 +19,7 @@ class Test_Get_Txns(unittest.TestCase):
             print(e)
 
         print("\nsample -> ", res[0])
-        time.sleep(5)
+        time.sleep(15)
         self.assertIsNotNone(res)
 
     def test_get_txns_serial_requests(self):
@@ -30,7 +30,7 @@ class Test_Get_Txns(unittest.TestCase):
             print(e)
 
         print("\nsample -> ", res[0])
-        time.sleep(5)
+        time.sleep(15)
         self.assertIsNotNone(res)
 
     def test_get_txns_parallel_requests_html(self):
@@ -41,7 +41,7 @@ class Test_Get_Txns(unittest.TestCase):
             print(e)
 
         print("\nsample -> ", res[0])
-        time.sleep(5)
+        time.sleep(15)
         self.assertIsNotNone(res)
 
     def test_get_txns_serial_requests_html(self):
@@ -52,7 +52,7 @@ class Test_Get_Txns(unittest.TestCase):
             print(e)
 
         print("\nsample -> ", res[0])
-        time.sleep(5)
+        time.sleep(15)
         self.assertIsNotNone(res)
 
 
