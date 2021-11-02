@@ -17,8 +17,9 @@ class Test_Get_Txns(unittest.TestCase):
             res = get_txns_parallel(using="requests")
         except Exception as e:
             print(e)
-                        
+
         print("\nsample -> ", res[0])
+        time.sleep(5)
         self.assertIsNotNone(res)
 
     def test_get_txns_serial_requests(self):
@@ -27,8 +28,9 @@ class Test_Get_Txns(unittest.TestCase):
             res = get_txns_serial(using="requests")
         except Exception as e:
             print(e)
-                        
+
         print("\nsample -> ", res[0])
+        time.sleep(5)
         self.assertIsNotNone(res)
 
     def test_get_txns_parallel_requests_html(self):
@@ -37,8 +39,9 @@ class Test_Get_Txns(unittest.TestCase):
             res = get_txns_parallel(using="requests_html")
         except Exception as e:
             print(e)
-                        
+
         print("\nsample -> ", res[0])
+        time.sleep(5)
         self.assertIsNotNone(res)
 
     def test_get_txns_serial_requests_html(self):
@@ -47,8 +50,9 @@ class Test_Get_Txns(unittest.TestCase):
             res = get_txns_serial(using="requests_html")
         except Exception as e:
             print(e)
-                        
+
         print("\nsample -> ", res[0])
+        time.sleep(5)
         self.assertIsNotNone(res)
 
 
