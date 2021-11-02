@@ -9,19 +9,47 @@ class Test_Get_Txns(unittest.TestCase):
 
     def tearDown(cls):
         _time = time.time() - cls.startTime
-        print(f"{_time:.4f} seconds", end=" -> ", flush=True)
+        print(f"Time taken -> {_time:.4f} seconds")
 
     def test_get_txns_parallel_requests(self):
-        return get_txns_parallel(using="requests")
+        res = None
+        try:
+            res = get_txns_parallel(using="requests")
+        except Exception as e:
+            print(e)
+                        
+        print("\nsample -> ", res[0])
+        self.assertIsNotNone(res)
 
     def test_get_txns_serial_requests(self):
-        return get_txns_serial(using="requests")
+        res = None
+        try:
+            res = get_txns_serial(using="requests")
+        except Exception as e:
+            print(e)
+                        
+        print("\nsample -> ", res[0])
+        self.assertIsNotNone(res)
 
     def test_get_txns_parallel_requests_html(self):
-        return get_txns_parallel(using="requests_html")
+        res = None
+        try:
+            res = get_txns_parallel(using="requests_html")
+        except Exception as e:
+            print(e)
+                        
+        print("\nsample -> ", res[0])
+        self.assertIsNotNone(res)
 
     def test_get_txns_serial_requests_html(self):
-        return get_txns_serial(using="requests_html")
+        res = None
+        try:
+            res = get_txns_serial(using="requests_html")
+        except Exception as e:
+            print(e)
+                        
+        print("\nsample -> ", res[0])
+        self.assertIsNotNone(res)
 
 
 if __name__ == '__main__':
